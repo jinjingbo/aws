@@ -1,0 +1,17 @@
+{
+    "name": "aws_trouble_shooting",
+    "version": "0.0.1",
+    "description": "amplify",
+    "scripts": {
+        "start": "npm run webpack",
+        "webpack": "webpack -d --watch"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "aws-amplify": "^1.1.27",
+        "webpack": "^3.0.0"
+    },
+    "devDependencies": {
+        "moment": "^2.24.0"
+    }
+}
