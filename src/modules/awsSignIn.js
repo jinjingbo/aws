@@ -26,9 +26,14 @@ export async function awsSignIn(
   const devAuthToken = {
     // https://aws-amplify.github.io/docs/js/authentication#federated-with-auth0
     // https://github.com/aws-amplify/amplify-js/issues/2529
+
+    // Test the expires 60 seconds from now:
+    expires_at: (60) * 1000 + (new Date().getTime()),
+
     // Set up to be expired 60 seconds after the token-assigned-time:
     // So the refreshHandler should be kick in:
-    expires_at: (60) * 1000 + tokenAssignedDateInUnixTimeStampInMilliseconds,
+    // expires_at: (60) * 1000 + tokenAssignedDateInUnixTimeStampInMilliseconds,
+
     identity_id: identityId,
     token,
   };
